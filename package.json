@@ -1,0 +1,23 @@
+{
+  "name": "midterm-portfolio-gabrielt01",
+  "version": "1.0.0",
+  "description": "midterm portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NJIT-WIS/midterm-portfolio-gabrielt01.git"
+  },
+  "keywords": [
+    "Student",
+    "project"
+  ],
+  "author": "Gabriel Trojanowski",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NJIT-WIS/midterm-portfolio-gabrielt01/issues"
+  },
+  "homepage": "https://github.com/NJIT-WIS/midterm-portfolio-gabrielt01#readme"
+}
