@@ -60,7 +60,7 @@ body {
   color: #fff;
   line-height: 125%;
   font-weight: 400;
-  background: #5e2612;
+  background: #612500;
 }
 
 a {
@@ -231,7 +231,7 @@ p.sm {
   padding: 10px 30px;
   border-radius: 100px;
   background-color: #d9d9d9;
-  color: #5e2612;
+  color: #612500;
   font-size: 28px;
   line-height: 100%;
   font-weight: 700;
@@ -256,7 +256,7 @@ p.sm {
   transition: 0.3s ease;
 }
 .line.dark {
-  background: linear-gradient(-102.73deg, #ffffff -1.23%, #ea997d 54.56%, #5e2612 92.98%);
+  background: linear-gradient(-102.73deg, #ffffff -1.23%, #ea997d 54.56%, #612500 92.98%);
   border: 1px solid #000000;
 }
 .line.dark::before {
@@ -271,8 +271,8 @@ p.sm {
   left: 0;
   width: 100%;
   height: 100%;
-  background: -webkit-gradient(linear, left bottom, left top, from(#000000), color-stop(rgba(0, 0, 0, 0.2862745098)), color-stop(#5e2612), to(rgba(0, 0, 0, 0)));
-  background: linear-gradient(360deg, #000000, rgba(0, 0, 0, 0.2862745098), #5e2612, rgba(0, 0, 0, 0));
+  background: -webkit-gradient(linear, left bottom, left top, from(#000000), color-stop(rgba(0, 0, 0, 0.2862745098)), color-stop(#612500), to(rgba(0, 0, 0, 0)));
+  background: linear-gradient(360deg, #000000, rgba(0, 0, 0, 0.2862745098), #612500, rgba(0, 0, 0, 0));
   content: "";
   z-index: 1;
 }
@@ -350,7 +350,7 @@ p.sm {
 }
 .input button:hover {
   opacity: 1;
-  color: #5e2612;
+  color: #612500;
 }
 
 .logo {
@@ -418,7 +418,7 @@ li.list::before {
   font-size: 32px;
   line-height: 100%;
   letter-spacing: -0.01em;
-  color: #5e2612;
+  color: #612500;
   padding-top: 8px;
   position: absolute;
   bottom: 100%;
@@ -492,7 +492,7 @@ li.list::before {
           animation-duration: 0.4s;
   -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1294117647);
           box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1294117647);
-  background-color: #5e2612;
+  background-color: #612500;
 }
 .header.sticky .line {
   opacity: 0;
@@ -743,7 +743,7 @@ li.list::before {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: linear-gradient(102.73deg, rgba(255, 255, 255, 0.15) -2.16%, #5e2612 98.9%);
+  background: linear-gradient(102.73deg, rgba(255, 255, 255, 0.15) -2.16%, #612500 98.9%);
   padding: 20px 8px 60px;
   text-align: center;
 }
@@ -1179,7 +1179,7 @@ li.list::before {
     font-size: 24px;
   }
   .header.active {
-    background-color: #5e2612;
+    background-color: #612500;
   }
   .header.active .line {
     opacity: 0;
@@ -1237,7 +1237,7 @@ li.list::before {
     padding: 50px 20px 20px 20px;
     height: 100%;
     overflow-y: auto;
-    background: #5e2612;
+    background: #612500;
   }
   .nav__inner li {
     margin: 0 0 30px 0;
