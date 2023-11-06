@@ -21,6 +21,7 @@ test('get started link', async ({ page }) => {
 
 const websiteURL = 'https://njit-wis.github.io/midterm-portfolio-gabrielt01/index.html';
 const expectedTitle = 'Home';
+const expectedMenuItemCount = 4;
 
 
 test.beforeEach(async ({ page }) => {
@@ -32,7 +33,13 @@ test('Check Page Title', async ({ page }) => {
   expect(title).toBe(expectedTitle);
 });
 
-test('Check All Sections Exist', async ({ page }) => {
-  await expect(page.locator('section')).toHaveCount(2);
+test('Check Navigation Menu in Header', async ({ page }) => {
+  const menuItemCount = await page.locator('.menu .menu-item').count();
+  expect(menuItemCount).toBe(expectedMenuItemCount);
+});
 
-  
+test('Check Footer', async ({ page }) => {
+  const footerLinkCount = await page.locator('.footer__inner-links a').count();
+  expect(footerLinkCount).toBe(4);
+});
+
