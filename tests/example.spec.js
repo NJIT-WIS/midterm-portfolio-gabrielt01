@@ -156,7 +156,7 @@ test('Check Work Section Presence', async ({ page }) => {
 });
 
 // Test #18: Check if the 'Projects' section is present on the homepage
-test('Check Work Section Presence', async ({ page }) => {
+test('Check Projects Section Presence', async ({ page }) => {
   await page.goto(websiteURL);
   const workSection = page.locator('.projects'); 
   await expect(workSection).toBeVisible();
