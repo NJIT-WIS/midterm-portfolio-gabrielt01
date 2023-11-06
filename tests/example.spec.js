@@ -19,4 +19,16 @@ test('get started link', async ({ page }) => {
 });
 
 
+const websiteURL = 'http://localhost:3000'
+const expectedTitle = 'Home';
+
+
+test.beforeEach(async ({ page }) => {
+  await page.goto(websiteURL);
+});
+
+test('Check Page Title', async ({ page }) => {
+  const title = await page.title();
+  expect(title).toBe(expectedTitle);
+});
 
