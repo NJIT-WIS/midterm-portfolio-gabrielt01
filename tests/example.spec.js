@@ -83,3 +83,32 @@ test('Check Social Media Links', async ({ page }) => {
   const socialLinks = page.locator('.introInfo__social a');
   await expect(socialLinks).toHaveCount(2);
 });
+
+// Test #9: Check if the profile image loads correctly
+test('Check Profile Image', async ({ page }) => {
+  await page.goto(websiteURL);
+  const profileImage = page.locator('.introInfo__avatar img');
+  await expect(profileImage).toBeVisible();
+  await expect(profileImage).toHaveAttribute('src', './images/avatar.png');
+});
+
+// Test #10: Check the main section titles are correct
+test('Check Main Section Titles', async ({ page }) => {
+  await page.goto(websiteURL);
+  const titles = page.locator('.main h2, .main h3');
+  await expect(titles).toHaveText([
+    'Gabriel Trojanowski',
+    'Proficiently exploring and solving procurement challenges with technology',
+    'Analyze',
+    'Identify',
+    'Implement',
+    'Optimize'
+  ]);
+});
+
+// Test #11: Check introductory text is present
+test('Check Introductory Text', async ({ page }) => {
+  await page.goto(websiteURL);
+  const introText = page.locator('.intro__inner-content h2');
+  await expect(introText).toContainText('Proficiently exploring and solving procurement challenges with technology');
+});
