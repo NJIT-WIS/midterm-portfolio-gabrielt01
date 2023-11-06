@@ -19,7 +19,7 @@ test('get started link', async ({ page }) => {
 });
 
 test.beforeEach(async ({ page }) => {
-  await page.goto(http://127.0.0.1:5500/index.html);
+  await page.goto('http://127.0.0.1:5500/index.html');
 });
 
 test('Check Page Title', async ({ page }) => {
