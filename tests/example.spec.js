@@ -19,7 +19,7 @@ test('get started link', async ({ page }) => {
 });
 
 
-const websiteURL = 'http://127.0.0.1:5500/docs/index.html';
+const websiteURL = 'https://njit-wis.github.io/midterm-portfolio-gabrielt01/index.html';
 const expectedTitle = 'Home';
 
 
