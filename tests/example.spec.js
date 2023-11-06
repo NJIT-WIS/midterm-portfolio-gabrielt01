@@ -1,6 +1,8 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
 
+
+// Playwright Test #1
 test('has title', async ({ page }) => {
   await page.goto('https://playwright.dev/');
 
@@ -8,6 +10,8 @@ test('has title', async ({ page }) => {
   await expect(page).toHaveTitle(/Playwright/);
 });
 
+
+// Playwright Test #2
 test('get started link', async ({ page }) => {
   await page.goto('https://playwright.dev/');
 
@@ -133,3 +137,11 @@ test('Check About Me Section', async ({ page }) => {
   const aboutMeSection = page.locator('.about');
   await expect(aboutMeSection).toBeVisible();
 });
+
+// Test #15: Check if clicking on the logo in the header navigates to the home page
+test('Check Logo Navigation', async ({ page }) => {
+  await page.goto(websiteURL);
+  await page.click('.header__inner-logo');
+  await expect(page).toHaveURL(websiteURL); // Assuming clicking the logo reloads the home page
+});
+
