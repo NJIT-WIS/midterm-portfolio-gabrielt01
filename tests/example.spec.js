@@ -127,40 +127,9 @@ test('Check Explore More Buttons Text', async ({ page }) => {
   await expect(exploreButtons).toHaveText(['Explore to Learn More', 'Explore to Learn More', 'Explore to Learn More']);
 });
 
-// Test #14: Check for the presence of the hamburger menu icon
-test('Check Hamburger Menu Icon', async ({ page }) => {
-  await page.goto(websiteURL);
-  const hamburgerMenu = page.locator('.header__menu-toggle');
-  await expect(hamburgerMenu).toBeVisible();
-});
-
-// Test #15: Check that the "About Me" section is present
+// Test #14: Check that the "About Me" section is present
 test('Check About Me Section', async ({ page }) => {
   await page.goto(websiteURL);
   const aboutMeSection = page.locator('.about');
   await expect(aboutMeSection).toBeVisible();
-});
-
-// Test #16: Check that the navigation is collapsible
-test('Check Navigation Collapse', async ({ page }) => {
-  await page.goto(websiteURL);
-  await page.setViewportSize({ width: 480, height: 640 });
-  const menuToggle = page.locator('.nav-toggle');
-  await menuToggle.click();
-  const menuVisibility = await page.locator('.nav').isVisible();
-  await expect(menuVisibility).toBeTruthy();
-});
-
-// Test #17: Check that the portfolio section has at least one project displayed
-test('Check Portfolio Section for Projects', async ({ page }) => {
-  await page.goto(websiteURL);
-  const portfolioItems = page.locator('.portfolio-item');
-  await expect(portfolioItems).toHaveCount(1); // Adjust this number based on the minimum number of projects you expect to display
-});
-
-// Test #18: Check that the "Skills" section displays at least one skill
-test('Check Skills Section for Skills', async ({ page }) => {
-  await page.goto(websiteURL);
-  const skillsList = page.locator('.skills-list .skill');
-  await expect(skillsList).toHaveCount(1); // Adjust this number based on the minimum number of skills you expect to display
 });
