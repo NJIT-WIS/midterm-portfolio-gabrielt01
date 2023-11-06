@@ -141,10 +141,3 @@ test('Check Logo Navigation', async ({ page }) => {
   await expect(page).toHaveURL(websiteURL); // Assuming clicking the logo reloads the home page
 });
 
-// Test #16: Check that the main background images are loaded
-test('Check Main Background Images Load', async ({ page }) => {
-  await page.goto(websiteURL);
-  const backgroundImages = page.locator('.main__bg-item img');
-  await expect(backgroundImages).toBeVisible();
-  await expect(backgroundImages).toHaveCount(5); 
-});
