@@ -112,3 +112,24 @@ test('Check Introductory Text', async ({ page }) => {
   const introText = page.locator('.intro__inner-content h2');
   await expect(introText).toContainText('Proficiently exploring and solving procurement challenges with technology');
 });
+
+// Test #12: Check if all project images load correctly
+test('Check Project Images Load', async ({ page }) => {
+  await page.goto(websiteURL);
+  const projectImages = page.locator('.main__bg-item img');
+  await expect(projectImages).toHaveCount(5);
+});
+
+// Test #13: Check the text of the Explore More buttons
+test('Check Explore More Buttons Text', async ({ page }) => {
+  await page.goto(websiteURL);
+  const exploreButtons = page.locator('.button');
+  await expect(exploreButtons).toHaveText(['Explore to Learn More', 'Explore to Learn More', 'Explore to Learn More']);
+});
+
+// Test #14: Check the alt text for all images in the intro section
+test('Check Alt Text for Intro Images', async ({ page }) => {
+  await page.goto(websiteURL);
+  const altTexts = page.locator('.intro img').allTextContents();
+  for (const alt of altTexts) {
+    await expect(alt).not.toBe('');
