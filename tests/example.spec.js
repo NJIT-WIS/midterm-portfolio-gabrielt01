@@ -21,6 +21,8 @@ test('get started link', async ({ page }) => {
 
 const websiteURL = 'https://njit-wis.github.io/midterm-portfolio-gabrielt01/index.html';
 const expectedTitle = 'Home';
+const experienceURL = 'https://njit-wis.github.io/midterm-portfolio-gabrielt01/skills.html#project-results'
+const educationURL = 'https://njit-wis.github.io/midterm-portfolio-gabrielt01/education.html'
 
 
 test.beforeEach(async ({ page }) => {
@@ -56,11 +58,11 @@ test('Check Main Navigation Links', async ({ page }) => {
 test('Check Experience Link Navigation', async ({ page }) => {
   await page.goto(websiteURL);
   await page.click('a[href="skills.html#project-results"]');
-  await expect(page).toHaveURL(https://njit-wis.github.io/midterm-portfolio-gabrielt01/skills.html#project-results);
+  await expect(page).toHaveURL(experienceURL);
 });
 
 test('Check Education Link Navigation', async ({ page }) => {
   await page.goto(websiteURL);
   await page.click('a[href="education.html"]');
-  await expect(page).toHaveURL(https://njit-wis.github.io/midterm-portfolio-gabrielt01/education.html);
+  await expect(page).toHaveURL(educationURL);
 });
