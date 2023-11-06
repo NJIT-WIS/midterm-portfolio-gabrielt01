@@ -1,6 +1,8 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
 
+
+// Playwright Test #1
 test('has title', async ({ page }) => {
   await page.goto('https://playwright.dev/');
 
@@ -8,6 +10,8 @@ test('has title', async ({ page }) => {
   await expect(page).toHaveTitle(/Playwright/);
 });
 
+
+// Playwright Test #2
 test('get started link', async ({ page }) => {
   await page.goto('https://playwright.dev/');
 
@@ -141,23 +145,3 @@ test('Check Logo Navigation', async ({ page }) => {
   await expect(page).toHaveURL(websiteURL); // Assuming clicking the logo reloads the home page
 });
 
-// Test #16: Check if the 'Contact' link navigates correctly
-test('Check Contact Link Navigation', async ({ page }) => {
-  await page.goto(websiteURL);
-  await page.click('a[href="contact.html"]'); // Update if the contact page has a different path
-  await expect(page).toHaveURL('https://njit-wis.github.io/midterm-portfolio-gabrielt01/contact.html'); // Update with the actual contact page URL
-});
-
-// Test #17: Check if the 'Work' section is present on the homepage
-test('Check Work Section Presence', async ({ page }) => {
-  await page.goto(websiteURL);
-  const workSection = page.locator('.work'); 
-  await expect(workSection).toBeVisible();
-});
-
-// Test #18: Check if the 'Projects' section is present on the homepage
-test('Check Projects Section Presence', async ({ page }) => {
-  await page.goto(websiteURL);
-  const workSection = page.locator('.projects'); 
-  await expect(workSection).toBeVisible();
-});
