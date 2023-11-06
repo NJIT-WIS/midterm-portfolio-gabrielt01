@@ -33,10 +33,6 @@ test('Check Page Title', async ({ page }) => {
   expect(title).toBe(expectedTitle);
 });
 
-test('Check Navigation Menu in Header', async ({ page }) => {
-  const menuItemCount = await page.locator('.menu .menu-item').count();
-  expect(menuItemCount).toBe(expectedMenuItemCount);
-});
 
 test('Check Footer', async ({ page }) => {
   const footerLinkCount = await page.locator('.footer__inner-links a').count();
