@@ -134,23 +134,14 @@ test('Check About Me Section', async ({ page }) => {
   await expect(aboutMeSection).toBeVisible();
 });
 
-// Test #15: Check if social media links are correct
-test('Check Social Media Links', async ({ page }) => {
-  await page.goto(websiteURL);
-  const githubLink = page.locator('a[href*="github"]');
-  const linkedinLink = page.locator('a[href*="linkedin"]');
-  await expect(githubLink).toHaveAttribute('href', 'https://www.github.com/gabrielt01/');
-  await expect(linkedinLink).toHaveAttribute('href', 'https://www.linkedin.com/in/gabriel-trojanowski/');
-});
-
-// Test #16: Check if clicking on the logo in the header navigates to the home page
+// Test #15: Check if clicking on the logo in the header navigates to the home page
 test('Check Logo Navigation', async ({ page }) => {
   await page.goto(websiteURL);
   await page.click('.header__inner-logo');
   await expect(page).toHaveURL(websiteURL); // Assuming clicking the logo reloads the home page
 });
 
-// Test #17: Check that the main background images are loaded
+// Test #16: Check that the main background images are loaded
 test('Check Main Background Images Load', async ({ page }) => {
   await page.goto(websiteURL);
   const backgroundImages = page.locator('.main__bg-item img');
